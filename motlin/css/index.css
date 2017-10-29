@@ -1,0 +1,62 @@
+/*
+[rgb( 255 , 59 , 48 )Red]
+[rgb( 255, 149, 0 )Orange]
+[rgb( 255, 204, 0 )Yellow]
+[rgb( 76, 217, 100 )Green]
+[rgb( 90, 200, 250 )TealBlue]
+[rgb( 0, 122, 255 )Blue]
+[rgb( 88, 86, 214 )Purple]
+[rgb( 255, 45, 85 )Pink]
+*/
+
+body {
+  margin:0;
+  padding:0;
+  background: #ffffff;
+}
+.logo {
+  height: 40px;
+  width: 132px;
+  padding-top: 20px;
+  padding-left:45px;
+}
+.nav {
+  background: url('../images/3.svg') no-repeat scroll center center/cover border-box,
+   linear-gradient(60deg, rgb(88, 86, 214) 0%, rgb(0, 122, 255) 100%)
+    no-repeat scroll center center/cover;
+   height: 600px;
+   display: flex;
+}
+
+.link {
+  display: inline-block;
+  margin-left: 35px;
+  margin-top: 16px;
+}
+.links a, a:hover {
+  text-decoration: none;
+  color:#f9fcf4 ;
+  font-weight: 600;
+  font-family:sans-serif;
+}
+.right {
+  margin-left: 200px;
+}
+.btn a {
+  border: 1px solid #f9fcf4;
+  background: #f9fcf4;
+  color: rgb(0, 122, 255);
+  padding:10px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+.btn a:hover {
+  border: 2px solid #f9fcf4;
+  background :inherit;
+  color: #f9fcf4;
+  padding:10px;
+  border-radius: 3px;
+  font-weight: 600;
+  transition: background .5s;
+  -webkit-transition: background .5s;
+}
