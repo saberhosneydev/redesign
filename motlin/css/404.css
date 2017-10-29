@@ -1,0 +1,21 @@
+.logo404 {
+  text-align: center;
+}
+.logo404 img{
+  height: 300px;
+  width: 300px;
+  margin-top:200px;
+}
+.logo404 h1 {
+  color:#f9fcf4;
+  margin-right: 40px;
+  font-family: sans-serif;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(60deg, rgb(88, 86, 214) 0%, rgb(0, 122, 255) 100%)
+  no-repeat scroll center center/cover;
+}
+.nav {
+  height: 0;
+}

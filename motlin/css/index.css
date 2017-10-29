@@ -21,11 +21,11 @@ body {
   padding-left:45px;
 }
 .nav {
-  background: url('../images/3.svg') no-repeat scroll center center/cover border-box,
-   linear-gradient(60deg, rgb(88, 86, 214) 0%, rgb(0, 122, 255) 100%)
-    no-repeat scroll center center/cover;
-   height: 600px;
    display: flex;
+   background: url('../images/3.svg') no-repeat scroll center center/cover border-box,
+    linear-gradient(60deg, rgb(88, 86, 214) 0%, rgb(0, 122, 255) 100%)
+     no-repeat scroll center center/cover;
+     height: 600px;
 }
 
 .link {
@@ -60,3 +60,4 @@ body {
   transition: background .5s;
   -webkit-transition: background .5s;
 }
+/*navigations ends here*/
