@@ -13,7 +13,7 @@
 }
 body {
   height: 100vh;
-  background: linear-gradient(60deg, rgb(88, 86, 214) 0%, rgb(0, 122, 255) 100%)
+  background: linear-gradient(60deg, rgb(55, 148, 190) 0%, rgb( 0, 122, 255 ) 100%)
   no-repeat scroll center center/cover;
 }
 .nav {

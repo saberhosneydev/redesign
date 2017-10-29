@@ -12,7 +12,18 @@
 body {
   margin:0;
   padding:0;
-  background: #ffffff;
+  background: #b53939;
+}
+.container {
+
+}
+.banner {
+  height: 90vh;
+  background: url('../images/3.svg') no-repeat scroll center center/cover border-box,
+  linear-gradient(60deg, rgb(88, 86, 214) 0%, rgb(0, 122, 255) 100%)
+  no-repeat scroll center center/cover;
+  border-bottom-left-radius: 6%;
+  border-bottom-right-radius: 6%;
 }
 .logo {
   height: 40px;
@@ -21,13 +32,8 @@ body {
   padding-left:45px;
 }
 .nav {
-   display: flex;
-   background: url('../images/3.svg') no-repeat scroll center center/cover border-box,
-    linear-gradient(60deg, rgb(88, 86, 214) 0%, rgb(0, 122, 255) 100%)
-     no-repeat scroll center center/cover;
-     height: 600px;
+  display: flex;
 }
-
 .link {
   display: inline-block;
   margin-left: 35px;
@@ -35,7 +41,7 @@ body {
 }
 .links a, a:hover {
   text-decoration: none;
-  color:#f9fcf4 ;
+  color:rgb(225, 233, 242) ;
   font-weight: 600;
   font-family:sans-serif;
 }
@@ -43,17 +49,17 @@ body {
   margin-left: 200px;
 }
 .btn a {
-  border: 1px solid #f9fcf4;
-  background: #f9fcf4;
+  border: 1px solid #fcf4f9;
+  background: #fcf4f9;
   color: rgb(0, 122, 255);
   padding:10px;
   border-radius: 3px;
   font-weight: 600;
 }
 .btn a:hover {
-  border: 2px solid #f9fcf4;
+  border: 2px solid #fcf4f9;
   background :inherit;
-  color: #f9fcf4;
+  color: #fcf4f9;
   padding:10px;
   border-radius: 3px;
   font-weight: 600;
@@ -61,3 +67,21 @@ body {
   -webkit-transition: background .5s;
 }
 /*navigations ends here*/
+.mainText {
+  margin-left: 50px;
+  margin-top: 200px;
+}
+.mainText h1{
+  font-family: monospace;
+  color: #fcf4f9;
+  width: 50%;
+  line-height: 160%;
+  letter-spacing: 2px;
+}
+
+.mainText h4{
+  font-family: monospace;
+  color: #fcf4f9;
+  width: 35%;
+  font-weight: 600;
+}
