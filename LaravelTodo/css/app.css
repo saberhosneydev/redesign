@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+.navbar {
+  background: inherit;
+}
+body {
+  background: oldlace;
+  font-family: "Open Sans", sans-serif;
+}
+.has-height-100 {
+  height: 100vh;
+}
+.has-margin-top-30 {
+
+  margin-top: 30vh;
+}
+.is-pulled-down {
+  position: absolute;
+  bottom: 0;
+  left: 46vw;
+}
