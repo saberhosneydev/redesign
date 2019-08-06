@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Awesome Title</title>
+  <link rel="stylesheet" href="../files/material.css" />
+  <link rel="stylesheet" href="../files/icons/material-icons.css" />
+  <script src="../files/material.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+	<script type="text/javascript" src="jq.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDjYqNKbZaom0jplOusloWlr5mOhW2WbgQ",
+    authDomain: "awes-e3043.firebaseapp.com",
+    databaseURL: "https://awes-e3043.firebaseio.com",
+    storageBucket: "awes-e3043.appspot.com",
+    messagingSenderId: "191054424051"
+  };
+  firebase.initializeApp(config);
+</script>
+</head>
+<body>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Title</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="index.html">Home</a>
+        <a class="mdl-navigation__link" href="login.html">Login</a>
+        <a class="mdl-navigation__link" href="signup.html">SignUp</a>
+        <a class="mdl-navigation__link" href="setting.html">Setting</a>
+      </nav>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+      <center>
+      <!-- Textfield with Floating Label -->
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" id="name">
+    <label class="mdl-textfield__label" for="sample3">Name...</label>
+  </div><br>
+        <!-- Textfield with Floating Label -->
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" id="photo">
+    <label class="mdl-textfield__label" for="sample3">Picture...</label>
+  </div><br>
+        <!-- Textfield with Floating Label -->
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="email" id="email">
+    <label class="mdl-textfield__label" for="sample3">Email...</label>
+  </div><br>
+        <!-- Textfield with Floating Label -->
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="password" id="password">
+    <label class="mdl-textfield__label" for="sample3">Password...</label>
+  </div><br>
+  <!-- Accent-colored raised button with ripple -->
+<button id="up" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+  SignUp
+</button><br>
+  </center>
+  </div>
+  </main>
+<script type="text/javascript">
+  $.getScript("index.js");
+  $(document).ready(function(){
+ firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    usigned(true);
+  } else {
+    usigned(false);
+  }
+});
+function usigned(bool) {
+    var user = firebase.auth().currentUser;
+  var uname = user.displayName;
+  if (bool) {
+    $("div.mdl-textfield").css("display", "none");
+    $("button#up").css("display", "none");
+    $("center").html( "<h3>Hello "  + uname + ". \n what are you doing here ?</h3>");
+  } else {
+    
+  }
+}
+  });
+</script>
+
+</body>
+</html>

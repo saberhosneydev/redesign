@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Awesome Title</title>
+  <link rel="stylesheet" href="../files/material.css" />
+  <link rel="stylesheet" href="../files/icons/material-icons.css" />
+  <script src="../files/material.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+	<script type="text/javascript" src="jq.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDjYqNKbZaom0jplOusloWlr5mOhW2WbgQ",
+    authDomain: "awes-e3043.firebaseapp.com",
+    databaseURL: "https://awes-e3043.firebaseio.com",
+    storageBucket: "awes-e3043.appspot.com",
+    messagingSenderId: "191054424051"
+  };
+  firebase.initializeApp(config);
+</script>
+</head>
+<body>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Title</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="index.html">Home</a>
+        <a class="mdl-navigation__link" href="login.html">Login</a>
+        <a class="mdl-navigation__link" href="signup.html">SignUp</a>
+        <a class="mdl-navigation__link" href="setting.html" id="clk">Setting</a>
+      </nav>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+    	<center>
+        <!-- Simple Textfield -->
+        <h5>Update Name & Photo</h5><br>
+  <i class="material-icons mdl-list__item-icon">person</i>
+  <div class="mdl-textfield mdl-js-textfield">
+ <input class="mdl-textfield__input" type="text" id="username">
+  </div><br>
+   <!-- Simple Textfield -->
+<i class="material-icons mdl-list__item-icon">image</i>
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="text" placeholder="New Profile Image" id="userphotonew">
+  </div><br>
+  <p>Prev. Image :</p><img src="" alt="" height="100" id="userphoto" width="100" /><br><br>
+<button id="updtni" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+  Update
+</button><br>
+  <hr><h5>Update Email</h5><br>
+  <!-- Simple Textfield -->
+  <i class="material-icons mdl-list__item-icon">email</i>
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" type="email" id="useremail">
+  </div><br>
+<button id="updte" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+  Update
+</button><br>
+  <hr><h5>Update Password</h5><br>
+  <!-- Simple Textfield -->
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" placeholder="New Password" type="password" id="password">
+  </div><br>
+<button id="updtp" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+  Update
+</button><br>
+ <hr><h5>Account Status</h5><br>
+  <ul class="demo-list-item mdl-list">
+  <li class="mdl-list__item">
+    <span id="useremailv" class="mdl-list__item-primary-content">
+      
+    </span>
+  </li>
+  </ul>
+  <br><button id="verf" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">re-send</button>
+  <hr><h5 style="color: red;">Delete Account :</h5><br>
+  <button id="delete" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+  Delete
+</button><br>
+      </center>
+    </div>
+  </main>
+</div>
+<script type="text/javascript">
+$.getScript("index.js");
+// show user details
+function func() {
+var user = firebase.auth().currentUser;
+var useremail  = document.getElementById('useremail');
+var username  = document.getElementById('username');
+var useremailv  = document.getElementById('useremailv');
+var userphoto  = document.getElementById('userphoto');
+var name, email, photoUrl, uid, emailVerified;
+
+if (user != null) {
+  name = user.displayName; 
+  email = user.email;
+  photoUrl = user.photoURL; 
+  emailVerified = user.emailVerified; 
+  uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
+                   // this value to authenticate with your backend server, if
+                   // you have one. Use User.getToken() instead.
+}
+if (emailVerified) {
+useremailv.innerHTML = '<i class="material-icons mdl-list__item-icon" style="color:green;">done</i>' + "Account Verified";
+$("#verf").css("display", "none");
+}else{
+  useremailv.innerHTML = '<i class="material-icons mdl-list__item-icon" style="color:red;">clear</i>' + "Account Not Verified yet" ;
+
+}
+useremail.value = email;
+username.value = name;
+$("img#userphoto").attr("src", photoUrl);
+};
+
+$(document).ready(function(){
+  var bla;
+     firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    usigned(true);
+  } else {
+    usigned(false);
+  }
+});
+function usigned(bool) {
+  if (bool) {
+   $("body").fadeOut(1000, function(){ // must use it to wait firebase to be fully loaded otherwise will result in undifiend
+   $("body").fadeIn(1000, func());
+  });
+  } else {
+    alert("SignUp or login first");
+  }
+}
+
+});
+
+
+// send an activation email
+$("button#verf").click(function(){
+var user = firebase.auth().currentUser;
+user.sendEmailVerification().then(function() {
+  console.log("email sent");
+}, function(error) {
+  console.log(error.message);
+});
+});
+</script>
+</body>
+</html>
