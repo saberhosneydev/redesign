@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Nova+Mono');
+html , body{
+	margin: 0;
+	padding:0;
+}
+.container {
+	font-family: "Nova Mono", monospace;
+	text-align: center;
+	position: fixed;
+	left: 15%;
+	top:45%;
+	width: 70%;
+	height: 10%;
+}
+blockquote {
+  background: #f9f9f9;
+  /*margin: 1.5em 10px;*/
+  padding: 0.5em 10px;
+  margin: 0;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote:after {
+	color: #ccc;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+	display: inline;
+	font-size: 36px;
+}
+.footer {
+	font-family: "Nova Mono", monospace;
+	position: fixed;
+	bottom: 0;
+	width: 20%;
+	left: 40%;
+}
+.love {
+	color:red;
+}
+.footer:hover {
+	width: 30%;
+	left: 35%;
+	font-size: 1.5rem;
+	transition: width .5s, left .5s, font-size .5s;
+}
