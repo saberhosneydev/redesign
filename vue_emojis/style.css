@@ -1,0 +1,9 @@
+img:hover {
+	cursor: pointer;
+}
+img:active {
+	border: .5px solid blue;
+}
+img {
+	margin:1px 1px;
+}

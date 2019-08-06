@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fake Esports</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./bulma.min.css" />
+	<link rel="stylesheet" href="./style.css">
+	<script src="./libs/jquery-3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="section">
+		<div class="nav">
+			<ul>
+				<a href="#"><img class="nav-image" src="./fakeesports.svg"   alt="Fake Esports Logo"></a>
+				<a href="#"><li class="nav-item">Home</li></a>
+				<a href="#"><li class="nav-item-right">Social</li></a>
+			</ul>
+		</div>
+	</div>
+	<div class="section">
+		<div class="tabs is-centered is-medium">
+			<ul>
+				<li class="tab-item is-active" data-rel="all"><a>All</a></li>
+				<li class="tab-item" data-rel="fnatic"><a>Fnatic</a></li>
+				<li class="tab-item" data-rel="skt"><a>SKT T1</a></li>
+				<li class="tab-item" data-rel="g2"><a>G2</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="section" id="articles">
+		<div class="all g2 is-inline-v2">
+			<img class="image" src="https://bulma.io/images/placeholders/640x480.png">
+		</div>
+		<div class="all skt is-inline-v2">
+			<img class="image" src="https://bulma.io/images/placeholders/640x480.png">
+		</div>
+		<div class="all g2 is-inline-v2">
+			<img class="image" src="https://bulma.io/images/placeholders/640x480.png">
+		</div>
+		<div class="all fnatic is-inline-v2">
+			<img class="image" src="https://bulma.io/images/placeholders/640x480.png">
+		</div>
+		<div class="divider">&nbsp;</div>
+		<div class="all g2 is-inline-v2">
+			<img class="image" src="https://bulma.io/images/placeholders/640x480.png">
+		</div>
+		<div class="all fnatic is-inline-v2">
+			<img class="image" src="https://bulma.io/images/placeholders/640x480.png">
+		</div>
+		<div class="all g2 is-inline-v2">
+			<img class="image" src="https://www.w3schools.com/cssref/pineapple.jpg">
+		</div>
+		<div class="all skt is-inline-v2">
+			<img class="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0kxX1HngNoExsuWBWlwiL-BeJF8x7W2LrVZ8Tmly8C-E1xnwY">
+		</div>
+	</div>
+	<div class="modal">
+			<div class="modal-background"></div>
+			<div class="modal-content">
+				<p class="image">
+					<img class="modal-image" src="#" alt="">
+				</p>
+			</div>
+			<button class="modal-close is-large" aria-label="close"></button>
+		</div>
+	<script type="text/javascript">
+		$(function() {
+			var selectedClass = "";
+			$(".tab-item").on("click", function(){
+				$('.tab-item').removeClass('is-active');
+				$(this).addClass('is-active');
+				selectedClass = $(this).attr("data-rel");
+				$("#articles").fadeTo(100, 0.1);
+				$("#articles div").not("."+selectedClass).fadeOut().addClass('hide-article');
+				$("#articles > .is-ancestor > div").not("."+selectedClass).fadeOut().removeClass('show-article');
+				setTimeout(function() {
+					$("."+selectedClass).fadeIn().addClass('show-article');
+					$("#articles").fadeTo(300, 1);
+				}, 300);
+			});
+			$('.image').on("click", function(){
+				$('.modal-image').attr("src", $(this).attr("src"));
+				$('div.modal').addClass('is-active');
+			});
+			$('.modal-close').click(function(){
+				$('div.modal').removeClass('is-active');
+			});
+		});
+	</script>
+
+</body>
+</html>
