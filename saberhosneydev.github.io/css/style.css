@@ -13,49 +13,6 @@ body {
   font-style: normal;
   font-weight: 200;
 }
-.nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-.logo {
-  margin: 2vh 0 0 4vh;
-  height: 5vh;
-  width: 7vw;
-}
-.links {
-  list-style: none;
-  padding: 0;
-  margin: 2vh 0 0 34vw;
-}
-li {
-  display: inline-block;
-  border: 1px solid var(--secondary_color);
-  padding: 1.2vh;
-  margin-left: .5vw;
-  box-shadow: 5px 5px 0 0 var(--secondary_color);
-}
-a {
-  text-decoration: none;
-  color: var(--primary_color);
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-a:hover {
-  color: #eee;
-  transition: ease color 0.2s;
-}
-li:hover {
-  background: var(--primary_color);
-  border: 1px solid var(--primary_color);
-  box-shadow: 5px 5px 0 0 var(--primary_color);
-  transition: ease background 0.2s, ease border 0.2s, ease box-shadow 0.2s;
-}
-hr {
-  margin-top: 2vh;
-  width: 95%;
-  border: 1px solid var(--primary_color);
-}
 .filler {
   height: 10vh;
 }
@@ -94,4 +51,94 @@ hr {
   background: var(--primary_color);
   color: #eee;
   font-size: 4vh;
+}
+.contact_area {
+  display: none;
+  position: fixed;
+  height: 70vh;
+  width: 30vw;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  background: var(--primary_color);
+  border-top-left-radius: 5px;
+}
+.contact__title {
+  font-size: 3rem;
+  margin:5% 0 0 10%;
+  color: white;
+}
+.contact__input {
+  display: block;
+  height: 4vh;
+  width: 80%;
+  margin: 10% 0 0 10%;
+  outline: none;
+  background: #eee;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 1vw;
+}
+label[for="email"] {
+  font-size: .85rem;
+  margin-left: 10%;
+  color: white;
+  text-transform: uppercase;
+}
+.contact__textarea {
+  background: #eee;
+  margin: 10% 0 0 10%;
+  display: block;
+  width: 80%;
+  border-radius: 5px;
+  padding-left: 1vw;
+  border: 1px solid black;
+  font-size: 1.1rem;
+}
+::placeholder {
+  color: var(--secondary_color);
+}
+.contact__button {
+  border: none;
+  background: var(--secondary_color);
+  color: white;
+  width: 40%;
+  margin: 10% 0 0 31%;
+  font-size: 5vh;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.contact_me__expander {
+  fill: var(--primary_color);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0 5vw 5vh 0;
+  height: 6vw;
+  width: 6vw;
+  z-index: 4;
+}
+.contact_me__animate {
+  animation: expander .6s ease;
+  animation-fill-mode:forwards;
+}
+.contact_me__animate__reverse {
+  animation: expanderReverse .6s ease;
+  animation-fill-mode:forwards;
+}
+@keyframes expander {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+@keyframes expanderReverse {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
