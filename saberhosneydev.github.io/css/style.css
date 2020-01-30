@@ -47,7 +47,7 @@ body {
   display: none;
   background: var(--primary_color);
   -webkit-filter: brightness(105%);
-          filter: brightness(105%);
+  filter: brightness(105%);
 }
 .expander {
   border: none;
@@ -64,7 +64,9 @@ body {
   right: -30vw;
   z-index: 3;
   background: var(--primary_color);
-  border-top-left-radius: 5px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-right: 2vw;
 }
 .contact__title {
   font-size: 3rem;
@@ -123,103 +125,70 @@ label[for="email"] {
   border-radius: 5px;
   border: 1px solid black;
 }
-.contact_me__expander {
-  fill: var(--primary_color);
+.contact_me__close {
+  fill: white;
   position: fixed;
   bottom: 0;
-  right: 0;
-  margin: 0 5vw 5vh 0;
-  height: 6vw;
-  width: 6vw;
+  right: -30vw;
   z-index: 4;
+  transform: rotate(45deg);
+  margin: 0 3vw 64vh 0;
+  height: 3vw;
+  width: 3vw;
+}
+.contact_me__close__animate {
+  animation: animateClose .6s ease;
+  animation-fill-mode: forwards;
+}
+.contact_me__close__animate__reverse {
+  animation: animateCloseReverse .6s ease;
+  animation-fill-mode: forwards;
 }
 .contact_me__animate {
   -webkit-animation: expander .6s ease;
-          animation: expander .6s ease;
+  animation: expander .6s ease;
   -webkit-animation-fill-mode:forwards;
-          animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
 }
 .contact_me__animate__reverse {
   -webkit-animation: expanderReverse .6s ease;
-          animation: expanderReverse .6s ease;
+  animation: expanderReverse .6s ease;
   -webkit-animation-fill-mode:forwards;
-          animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
 }
 .contact_area__animate {
   -webkit-animation: showContactMe .6s ease;
-          animation: showContactMe .6s ease;
+  animation: showContactMe .6s ease;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .contact_area__animate__reverse {
   -webkit-animation: showContactMeReverse .6s ease;
-          animation: showContactMeReverse .6s ease;
+  animation: showContactMeReverse .6s ease;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
-@-webkit-keyframes expander {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    margin: 0 5vw 5vh 0;
-    height: 6vw;
-    width: 6vw;
-  }
-  to {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    margin: 0 1vw 64vh 0;
-    height: 3vw;
-    width: 3vw;
-  }
+.openContact {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 70vh;
+  width: 3vw;
+  z-index: 5;
+  background:var(--primary_color);
+  border-top-left-radius: 20px;
 }
-@keyframes expander {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    margin: 0 5vw 5vh 0;
-    height: 6vw;
-    width: 6vw;
-  }
-  to {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    margin: 0 1vw 64vh 0;
-    height: 3vw;
-    width: 3vw;
-  }
+.openContact:hover {
+  background: var(--secondary_color);
 }
-@-webkit-keyframes expanderReverse {
-  from {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    margin: 0 1vw 64vh 0;
-    height: 3vw;
-    width: 3vw;
-  }
-  to {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    margin: 0 5vw 5vh 0;
-    height: 6vw;
-    width: 6vw;
-  }
-}
-@keyframes expanderReverse {
-  from {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    margin: 0 1vw 64vh 0;
-    height: 3vw;
-    width: 3vw;
-  }
-  to {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    margin: 0 5vw 5vh 0;
-    height: 6vw;
-    width: 6vw;
-  }
+.contact-me__word {
+  height: 20vh;
+  width: 20vw;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 0 5vw -1vh 0;
 }
 @-webkit-keyframes showContactMe {
   from {
@@ -246,6 +215,22 @@ label[for="email"] {
   }
 }
 @keyframes showContactMeReverse {
+  from {
+    right: 0vw;
+  }
+  to {
+    right: -30vw;
+  }
+}
+@keyframes animateClose {
+  from {
+    right: -30vw;
+  }
+  to {
+    right: 0vw;
+  }
+}
+@keyframes animateCloseReverse {
   from {
     right: 0vw;
   }
