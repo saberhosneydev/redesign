@@ -22,7 +22,8 @@ function toggleContact() {
         button[0].classList.remove("contact_me__animate__reverse");
         button[0].style.fill = "white";
         //Show the contact me section
-        element[0].style.display = "block";
+        element[0].classList.add("contact_area__animate");
+        element[0].classList.remove("contact_area__animate__reverse");
         element[0].setAttribute("currentState", !currentState);
     } else {
         currentState = false;
@@ -30,7 +31,9 @@ function toggleContact() {
         button[0].classList.remove("contact_me__animate");
         button[0].classList.add("contact_me__animate__reverse");
         button[0].style.fill = "#8072b3";
-        element[0].style.display = "none";
+         //Hide the contact me section
+        element[0].classList.remove("contact_area__animate");
+        element[0].classList.add("contact_area__animate__reverse");
         element[0].setAttribute("currentState", !currentState);
     }
 }
