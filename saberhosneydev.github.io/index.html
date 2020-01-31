@@ -9,7 +9,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="HandheldFriendly" content="true" />
 	<title>Saber Hosney</title>
-	<link rel="stylesheet" href="https://use.typekit.net/ivi2ubh.css" />
 	<link rel="stylesheet" href="./css/style.css" />
 	<link rel="stylesheet" href="./css/nav.css" />
 </head>
@@ -115,94 +114,98 @@
 				id="path53"
 				inkscape:connector-curvature="0" /></g></g></g></svg></a>
 				<p class="contact__title">Contact Me</p>
-				<form method="POST" action="#" class="contact__form">
+				<form class="contact__form" id="contactForm" action="#" method="POST">
 					<input type="text" class="contact__input" id="name" placeholder="Your name">
 					<input type="email" class="contact__input" id="email" placeholder="Your email">
 					<label for="email">It will not be shared with anyone, I promise.</label>
 					<textarea id="content" cols="30" rows="10" class="contact__textarea" placeholder="Your message"></textarea>
-					<button class="contact__button" onclick="sendEmail()">Send</button>
+					<button class="contact__button" type="submit">Send</button>
 				</form>
 			</div>
 			<a href="#" class="openContact" onclick="openContact()"></a>
 			<!-- ContactMe word -->
-				<svg class="contact-me__word"
-				xmlns:dc="http://purl.org/dc/elements/1.1/"
-				xmlns:cc="http://creativecommons.org/ns#"
-				xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-				xmlns:svg="http://www.w3.org/2000/svg"
-				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 71.29628 20.65699"
-				version="1.1"
-				id="svg8"
-				inkscape:version="0.92.0 r15299"
-				sodipodi:docname="contactme.svg">
-				<defs
-				id="defs2" />
-				<sodipodi:namedview
-				id="base"
-				pagecolor="#ffffff"
-				bordercolor="#666666"
-				borderopacity="1.0"
-				inkscape:pageopacity="0.0"
-				inkscape:pageshadow="2"
-				inkscape:zoom="1.4"
-				inkscape:cx="282.86481"
-				inkscape:cy="59.685119"
-				inkscape:document-units="mm"
-				inkscape:current-layer="layer1"
-				showgrid="false"
-				inkscape:window-width="1280"
-				inkscape:window-height="961"
-				inkscape:window-x="-8"
-				inkscape:window-y="-8"
-				inkscape:window-maximized="1" />
-				<metadata
-				id="metadata5">
-				<rdf:RDF>
-				<cc:Work
-				rdf:about="">
-				<dc:format>image/svg+xml</dc:format>
-				<dc:type
-				rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-				<dc:title></dc:title>
-			</cc:Work>
-		</rdf:RDF>
-	</metadata>
-	<g
-	inkscape:label="Layer 1"
-	inkscape:groupmode="layer"
-	id="layer1"
-	transform="translate(-72.890439,-168.52137)">
-	<text
-	xml:space="preserve"
-	style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-	x="72.382439"
-	y="176.23662"
-	id="text20"><tspan
-	sodipodi:role="line"
-	id="tspan18"
-	x="72.382439"
-	y="176.23662"
-	style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458332">Contact me</tspan></text>
-	<g
-	transform="matrix(-0.36494641,0,0,0.3145093,148.85065,167.44262)"
-	id="g91">
-	<path
-	inkscape:connector-curvature="0"
-	id="path58"
-	d="m 52.523,69.11 c -5.586,0 -11.179853,-0.9413 -16.235,-3.42 -9.373853,-4.5963 -15.316,-13.77 -17.662,-27.266 -0.113,-0.653 0.324,-1.274 0.978,-1.388 0.659,-0.115 1.274,0.325 1.388,0.977 2.206,12.694 7.705901,21.280202 16.348,25.52 19.490901,9.562202 48.928,-5.779 49.223,-5.936 0.585,-0.309 1.313,-0.086 1.622,0.5 0.31,0.585 0.087,1.312 -0.499,1.622 -0.943,0.497 -18.001,9.391 -35.163,9.391 z"
-	sodipodi:nodetypes="sscccscccs" />
-	<g
-	id="g64">
-	<path
-	inkscape:connector-curvature="0"
-	d="m 13.979,48.159 c -0.176,0 -0.354,-0.039 -0.523,-0.121 -0.597,-0.29 -0.845,-1.008 -0.555,-1.604 l 4.858,-9.992 c 0.398,-0.82 1.094,-1.374 1.908,-1.52 0.813,-0.146 1.66,0.131 2.318,0.764 l 8.054,7.723 c 0.479,0.459 0.495,1.218 0.036,1.697 -0.458,0.478 -1.218,0.494 -1.697,0.036 l -8.054,-7.723 c -0.128,-0.123 -0.216,-0.132 -0.234,-0.134 -0.021,0.004 -0.097,0.05 -0.173,0.207 l -4.858,9.992 c -0.207,0.426 -0.634,0.675 -1.08,0.675 z"
-	id="path62" />
+			<svg class="contact-me__word"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:cc="http://creativecommons.org/ns#"
+			xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:svg="http://www.w3.org/2000/svg"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 71.29628 20.65699"
+			version="1.1"
+			id="svg8"
+			inkscape:version="0.92.0 r15299"
+			sodipodi:docname="contactme.svg">
+			<defs
+			id="defs2" />
+			<sodipodi:namedview
+			id="base"
+			pagecolor="#ffffff"
+			bordercolor="#666666"
+			borderopacity="1.0"
+			inkscape:pageopacity="0.0"
+			inkscape:pageshadow="2"
+			inkscape:zoom="1.4"
+			inkscape:cx="282.86481"
+			inkscape:cy="59.685119"
+			inkscape:document-units="mm"
+			inkscape:current-layer="layer1"
+			showgrid="false"
+			inkscape:window-width="1280"
+			inkscape:window-height="961"
+			inkscape:window-x="-8"
+			inkscape:window-y="-8"
+			inkscape:window-maximized="1" />
+			<metadata
+			id="metadata5">
+			<rdf:RDF>
+			<cc:Work
+			rdf:about="">
+			<dc:format>image/svg+xml</dc:format>
+			<dc:type
+			rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+			<dc:title></dc:title>
+		</cc:Work>
+	</rdf:RDF>
+</metadata>
+<g
+inkscape:label="Layer 1"
+inkscape:groupmode="layer"
+id="layer1"
+transform="translate(-72.890439,-168.52137)">
+<text
+xml:space="preserve"
+style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+x="72.382439"
+y="176.23662"
+id="text20"><tspan
+sodipodi:role="line"
+id="tspan18"
+x="72.382439"
+y="176.23662"
+style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Handlee;-inkscape-font-specification:Handlee;stroke-width:0.26458332">Contact me</tspan></text>
+<g
+transform="matrix(-0.36494641,0,0,0.3145093,148.85065,167.44262)"
+id="g91">
+<path
+inkscape:connector-curvature="0"
+id="path58"
+d="m 52.523,69.11 c -5.586,0 -11.179853,-0.9413 -16.235,-3.42 -9.373853,-4.5963 -15.316,-13.77 -17.662,-27.266 -0.113,-0.653 0.324,-1.274 0.978,-1.388 0.659,-0.115 1.274,0.325 1.388,0.977 2.206,12.694 7.705901,21.280202 16.348,25.52 19.490901,9.562202 48.928,-5.779 49.223,-5.936 0.585,-0.309 1.313,-0.086 1.622,0.5 0.31,0.585 0.087,1.312 -0.499,1.622 -0.943,0.497 -18.001,9.391 -35.163,9.391 z"
+sodipodi:nodetypes="sscccscccs" />
+<g
+id="g64">
+<path
+inkscape:connector-curvature="0"
+d="m 13.979,48.159 c -0.176,0 -0.354,-0.039 -0.523,-0.121 -0.597,-0.29 -0.845,-1.008 -0.555,-1.604 l 4.858,-9.992 c 0.398,-0.82 1.094,-1.374 1.908,-1.52 0.813,-0.146 1.66,0.131 2.318,0.764 l 8.054,7.723 c 0.479,0.459 0.495,1.218 0.036,1.697 -0.458,0.478 -1.218,0.494 -1.697,0.036 l -8.054,-7.723 c -0.128,-0.123 -0.216,-0.132 -0.234,-0.134 -0.021,0.004 -0.097,0.05 -0.173,0.207 l -4.858,9.992 c -0.207,0.426 -0.634,0.675 -1.08,0.675 z"
+id="path62" />
 </g>
 </g>
 </g>
 </svg>
-<!-- Loading main script -->
+<!-- Load email.Js service -->
+<script type="text/javascript"
+src="./js/email.min.js">
+</script>
+<!-- Load main script -->
 <script src="./js/client.js"></script>
 </body>
 </html>

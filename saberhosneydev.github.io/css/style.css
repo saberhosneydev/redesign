@@ -4,6 +4,14 @@
   --primary_color: #8072b3;
   --secondary_color: rgb(149, 136, 199);
 }
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o58a-wg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 html,
 body {
   margin: 0;
@@ -11,9 +19,8 @@ body {
 }
 body {
   background: #eee;
-  font-family: titillium-web, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   font-style: normal;
-  font-weight: 200;
 }
 .filler {
   height: 10vh;
@@ -53,7 +60,7 @@ body {
   border: none;
   background: var(--primary_color);
   color: #eee;
-  font-size: 4vh;
+  font-size: 3.5vh;
 }
 .contact_area {
   display: block;
@@ -77,7 +84,7 @@ body {
   display: block;
   height: 4vh;
   width: 80%;
-  margin: 10% 0 0 10%;
+  margin: 10% 0 0 2.5vw;
   outline: none;
   background: #eee;
   border: 1px solid black;
@@ -86,13 +93,13 @@ body {
 }
 label[for="email"] {
   font-size: .85rem;
-  margin-left: 10%;
+  margin-left: 2.5vw;
   color: white;
   text-transform: uppercase;
 }
 .contact__textarea {
   background: #eee;
-  margin: 10% 0 0 10%;
+  margin: 10% 0 0 2.5vw;
   display: block;
   width: 80%;
   border-radius: 5px;
@@ -180,7 +187,7 @@ label[for="email"] {
   border-top-left-radius: 20px;
 }
 .openContact:hover {
-  background: var(--secondary_color);
+  filter: brightness(110%);
 }
 .contact-me__word {
   height: 20vh;

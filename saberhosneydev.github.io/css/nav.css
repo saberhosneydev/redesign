@@ -37,6 +37,6 @@ li:hover {
 }
 hr {
   margin-top: 2vh;
-  width: 95vw;
+  width: 95%;
   border: 1px solid var(--primary_color);
 }
