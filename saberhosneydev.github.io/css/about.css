@@ -22,8 +22,21 @@ body {
   color: var(--primary_color);
   overflow-x: hidden;
 }
-.filler {
-  height: 5vh;
+hr {
+  margin-top: 2vh;
+  width: 95%;
+  border: 1px solid var(--primary_color);
+}
+.heading {
+  text-align: center;
+  margin-bottom: 3vh;
+}
+.heading .current {
+  pointer-events: none;
+  color: black;
+  padding-bottom: 1vh;
+   border-bottom: 3px solid var(--primary_color);
+   font-size: 2rem;
 }
 .title {
   overflow: hidden;
@@ -42,10 +55,16 @@ body {
  width: 100%;
 }
 .title:before {
-  margin-left: -170%;
+  margin-left: -100%;
 }
 .title:after {
   margin-right: -100%;
+}
+.title__left:before {
+  margin-left: -170%;
+}
+.title__right:after {
+  margin-right: -160%;
 }
 .bio {
   margin-left: 2.5vw;
@@ -108,9 +127,76 @@ body {
 .underline:hover .tooltip{
   visibility: visible;
 }
-.section {
-  height: 100vh;
+a {
+  text-decoration: none;
 }
-.landing_image {
-  width: 100vw;
+.links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.links * {
+  padding: 0 10px;
+}
+.links_left {
+  border-right: 3px solid var(--primary_color);
+}
+
+.links_left__image {
+  height: 5vh;
+  width:10vw;
+}
+.links_right__image {
+  height: 5vh;
+  width:10vw;
+}
+.contact_form {
+}
+.contact_input {
+  height: 5vh;
+  width: 50%;
+  border:2px solid var(--primary_color);
+  outline: none;
+  padding-left: 15px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  color: var(--primary_color);
+  background: #eee;
+  margin-left: 25%;
+}
+.contact_textarea {
+  width: 50%;
+  margin-left: 25%;
+  border:2px solid var(--primary_color);
+  outline: none;
+  padding-left: 15px;
+  padding-top: 15px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  color: var(--primary_color);
+  background: #eee;
+}
+.labelData {
+  margin-left: 28%;
+  font-size: .9rem;
+  font-weight: 600;
+}
+.contact_button {
+  width: 50%;
+  margin-left: 26%;
+  padding-left: 15px;
+  height: 5vh;
+  background: var(--primary_color);
+  outline: none;
+  border:none;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  margin-bottom: 2vh;
+}
+.danger {
+  color: red;
+}
+.success {
+  color: lightgreen;
 }
