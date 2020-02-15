@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
 	<title>Rules of the internet !</title>
 	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 	<div class="container">
-		<blockquote>
-			<p>It's quality rather than quantity that matters.</p>
-		</blockquote>
+		<p id="title"></p>
+		<div class="clearfix"></div>
+		<p id="quote"></p>
+		<p id="author"></p>
+		<div class="clearfix"></div>
+		<div class="footer">
+			<p>Made by <a target="_blank" href="https://github.com/saberhosneydev">Saber Hosney</a></p>
+		</div>
 	</div>
-	<div class="footer">
-		<p>Made with <span class="love">&hearts;</span> by <a target="_blank" href="https://facebook.com/saberhosneydev">Saber Hosney</a></p>
-	</div>
+	<script>
+		let quote = document.getElementById("quote");
+		let author = document.getElementById("author");
+		let title = document.getElementById("title");
+		let container = document.getElementsByClassName("container");
+		fetch('http://quotes.rest/qod').then((res) => {
+			return res.json();
+		}).then((data) => {
+			title.innerHTML = (data.contents.quotes[0].title);
+			quote.innerHTML = (data.contents.quotes[0].quote);
+			author.innerHTML = (data.contents.quotes[0].author);
+			//document.body.style.backgroundImage = "url('" + data.contents.quotes[0].background + "')";
+		}).catch((err) => {
+			alert(err);
+		});
+	</script>
 </body>
+
 </html>

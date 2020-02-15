@@ -1,57 +1,63 @@
-@import url('https://fonts.googleapis.com/css?family=Nova+Mono');
-html , body{
-	margin: 0;
-	padding:0;
-}
-.container {
-	font-family: "Nova Mono", monospace;
-	text-align: center;
-	position: fixed;
-	left: 15%;
-	top:45%;
-	width: 70%;
-	height: 10%;
-}
-blockquote {
-  background: #f9f9f9;
-  /*margin: 1.5em 10px;*/
-  padding: 0.5em 10px;
+body {
   margin: 0;
-  quotes: "\201C""\201D""\2018""\2019";
+  padding: 0;
+  border-top: 7px solid #e76666;
+  background-color: #f6f8fa;
+  background-repeat: no-repeat;
 }
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+
+.container {
+  text-align: center;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  font-size: 2rem;
 }
-blockquote:after {
-	color: #ccc;
-  content: close-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+
+.container p {
+  margin: 0;
+  color: #2f363d;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  padding: 0 10px;
 }
-blockquote p {
-	display: inline;
-	font-size: 36px;
+
+.container #author {
+  margin-top: 10px;
+  margin-right: 20px;
+  float: right;
+  color: #e76666;
 }
+
+.container #title {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  float: left;
+  color: #e76666;
+  font-size: 60%;
+}
+
+.clearfix {
+  clear: both;
+}
+
 .footer {
-	font-family: "Nova Mono", monospace;
-	position: fixed;
-	bottom: 0;
-	width: 20%;
-	left: 40%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #e76666;
 }
-.love {
-	color:red;
+
+.footer p {
+  color: #dae9f8;
+  font-size: 1.1rem;
+  padding: 10px 0;
 }
-.footer:hover {
-	width: 30%;
-	left: 35%;
-	font-size: 1.5rem;
-	transition: width .5s, left .5s, font-size .5s;
+
+.footer p a {
+  color: #2f363d;
+  text-decoration: none;
+  border-bottom: 2px solid black;
 }
+
+/*# sourceMappingURL=style.css.map */
