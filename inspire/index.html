@@ -22,7 +22,7 @@
 		let author = document.getElementById("author");
 		let title = document.getElementById("title");
 		let container = document.getElementsByClassName("container");
-		fetch('http://quotes.rest/qod').then((res) => {
+		fetch('https://quotes.rest/qod').then((res) => {
 			return res.json();
 		}).then((data) => {
 			title.innerHTML = (data.contents.quotes[0].title);
