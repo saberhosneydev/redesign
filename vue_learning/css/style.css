@@ -1,0 +1,34 @@
+body {
+    background:#eee;
+    font-family: "Jetbrains mono";
+    font-size: 20px;
+    width: 100vw;
+    text-align: center;
+    overflow-x: hidden;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". .";
+  text-align: left;
+}
+ul {
+  border: 1px solid black;
+}
+ul:nth-child(2) {
+  margin-right: 15px;
+}
+input {
+    font-family: "Jetbrains mono";
+    font-size: 20px;
+}
+ul li {
+  padding-top: 10px;
+}
+#myInput {
+  border: 0;
+  background: inherit;
+  border-bottom: 2px solid black;
+}

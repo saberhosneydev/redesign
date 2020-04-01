@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Great vue App</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div id="app-root">
+      <div class="header">
+        <input type="text" v-model:value="newToDo" placeholder="ToDo ?" id="myInput">
+          <button v-on:click="addToDo" id="myBtn">Add</button>
+      </div>
+      <div class="grid-container">
+        <ul style="border-right: 1px solid black;">
+          <b><li>You need to do :</li></b>
+          <todo-item v-for="todo in todos" v-if="!todo.checked" :param="todo" :key="todo.id"></todo-item>
+        </ul>
+        <ul>
+          <b><li>You have done :</li></b>
+          <todo-item v-for="todo in todos" v-if="todo.checked" :param="todo" :key="todo.id"></todo-item>
+        </ul>
+      </div>
+
+
+    </div>
+    <script src="./js/vue.js" charset="utf-8"></script>
+    <script src="/js/client.js" charset="utf-8"></script>
+  </body>
+</html>
