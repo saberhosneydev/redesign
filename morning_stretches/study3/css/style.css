@@ -1,0 +1,472 @@
+@import "../../global.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300,400,600&display=swap');
+:root {
+    --black:#383d3b;
+    --background:#EBF7F7;
+    --green:#2B825F;
+    --blue:#55B1E5;
+    --grey:#d4dbd8;
+}
+body {
+    background: #f5f5f5;
+    text-align: center;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+.jumpotron {
+    color: white;
+    height: 500px;
+}
+.background {
+    background-image: url(../images/header.jpg);
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: -1;
+}
+.layer {
+    background-color: rgba(0,0,0, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.title {
+    font-family: 'Comfortaa', cursive;
+    margin:0;
+    position: relative;
+    z-index: 3;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-top:20px;
+}
+.logo {
+    position: absolute;
+    font-family: "Jetbrains Mono";
+    font-weight: 300;
+    font-size: 20px;
+    margin: 35px 0 0 30px;
+    text-transform: uppercase;
+}
+.nav {
+}
+.search {
+    position: absolute;
+    right: 0;
+    width: 0px;
+    padding:0;
+    margin: 30px 30px 0 0;
+    border-radius: 50px;
+    border:none;
+    height: 25px;
+    background: rgba(255, 255, 255, .3);
+    color: white;
+    z-index: 5;
+    font-size: 18px;
+    font-family: 'Comfortaa', cursive;
+}
+::placeholder {
+    color:white;
+    font-size: 14px;
+}
+.openSearch {
+    animation-name: openSearch;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+}
+.openSearchIcon {
+    animation-name: openSearchIcon;
+    animation-duration: .7s;
+    animation-fill-mode: forwards;
+}
+@keyframes openSearch {
+    from{
+        padding:0;
+        width:0px;
+    }
+    to {
+        width: 256px;
+        padding: 5px 20px 4px 35px;
+    }
+}
+@keyframes openSearchIcon {
+    from {
+        margin: 38px 30px 0 0;
+    }
+    to {
+        margin: 38px 313px 0 0;
+    }
+}
+.gg-search {
+    box-sizing: border-box;
+    position: absolute;
+    right:0;
+    margin: 38px 30px 0 0;
+    display: block;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+    border-radius: 100%;
+    z-index: 6;
+}
+.gg-search::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    width: 2px;
+    height: 8px;
+    background: white;
+    transform: rotate(-45deg);
+    top: 10px;
+    left: 12px
+}
+.search:focus {
+    outline: none;
+}
+.clear {
+    clear: both;
+}
+.underline {
+    background-image: linear-gradient(120deg, var(--green) 0%, var(--blue) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    background-position: 0% 88%;
+    transition: background-size 0.25s ease-in;
+}
+.underline:hover {
+    background-size: 100% 88%;
+}
+.category {
+    font-family: 'Comfortaa', cursive;
+    margin: 0;
+    padding-top: 200px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+a {
+    text-decoration: none;
+}
+
+.icon {
+    height: 64px;
+    width: 64px;
+    margin:10px 10px 0 10px;
+    fill: white;
+    transform: scale(.8);
+}
+.facebook:hover {
+    fill: #1877F2;
+}
+.twitter:hover {
+    fill: #1DA1F2;
+}
+.reddit:hover {
+    fill: #FF4500;
+}
+.content {
+    padding-top: 20px;
+    text-align: left;
+    margin-left: 20%;
+    width: 60%;
+    padding-bottom: 20px;
+}
+.content p {
+    font-size: 15px;
+    line-height: 26px;
+    color: black;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #7f8c8d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.footer {
+    color: white;
+    background: #2c3e50;
+    height: 220px;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+.section {
+    width: 100%;
+    text-align: center;
+}
+.section .share .category {
+    padding-top: 70px;
+}
+.mail p {
+    padding:0;
+    margin:0;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-size: 22px;
+}
+.mail input{
+    padding-left: 10px;
+    height: 40px;
+    width: 60%;
+    border: none;
+    background: #ecf0f1;
+    font-size: 20px;
+    border-radius: 2px;
+}
+
+.mail button{
+    height: 42px;
+    width: 10%;
+    border: none;
+    background: #2ecc71;
+    font-size: 20px;
+    border-radius: 2px;
+}
+.section .logo {
+    position: relative;
+    padding: 0;
+    margin:0;
+    margin-top:70px;
+}
+.section .logo+p {
+    font-family: 'Comfortaa', cursive;
+}
+.authorDetails {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: ". ." ". .";
+}
+.authorImage {
+    background: url(../images/profile.jpg) center center/cover;
+    height: 128px;
+    width: 128px;
+    border-radius: 100%;
+    transform: scale(.8);
+}
+.authorDetails .author {
+    margin-top: 35px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.author span {
+    font-weight: 400;
+    font-size: .9rem;
+}
+.related p {
+    font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 300;
+}
+
+.row {
+	max-width: 900px;
+	margin: 0;
+}
+
+.card {
+	float: left;
+	padding: 20px 2px;
+	width: 49%;
+}
+
+.card .menu-content {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.card .menu-content::before, .card .menu-content::after {
+	content: '';
+	display: table;
+}
+
+.card .menu-content::after {
+	clear: both;
+}
+
+.card .menu-content li {
+	display: inline-block;
+}
+
+.card .menu-content a {
+	color: #fff;
+}
+
+.card .menu-content span {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	font-size: 10px;
+	font-weight: 700;
+	font-family: 'Open Sans';
+	transform: translate(-50%, 0);
+}
+
+.card .wrapper {
+	background-color: #fff;
+	height: 400px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.card .data {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	transform: translateY(calc(70px + 1em));
+	transition: transform 0.3s;
+}
+
+.card .data .content {
+	padding: 1em;
+	position: relative;
+	z-index: 1;
+    margin:0;
+}
+
+.card .author {
+	font-size: 16px;
+    font-weight: 600;
+}
+
+.card .title {
+	margin-top: 10px;
+    font-size: 1.9rem;
+}
+
+.card .text {
+	height: 70px;
+	margin: 0;
+    font-size: 16px;
+    color: white;
+}
+
+.card input[type='checkbox'] {
+	display: none;
+}
+
+.card input[type='checkbox']:checked + .menu-content {
+	transform: translateY(-60px);
+}
+.example-2 .wrapper .imgss{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+	background: url(../images/header.jpg) center/cover no-repeat;
+    filter: grayscale(100%);
+    transition: .5s ease-out filter;
+}
+.example-2 .wrapper .imgss:hover {
+    transition: .5s ease-in filter;
+    filter: grayscale(0%);
+}
+.example-2 .wrapper:hover .menu-content span {
+	transform: translate(-50%, -10px);
+	opacity: 1;
+}
+.example-2 .header {
+    position: relative;
+	color: #fff;
+	padding: 1em;
+}
+
+.example-2 .header::before, .example-2 .header::after {
+	content: '';
+	display: table;
+}
+
+.example-2 .header::after {
+	clear: both;
+}
+
+.example-2 .header .date {
+	float: left;
+	font-size: 12px;
+    color: black;
+}
+
+.example-2 .menu-content {
+	float: right;
+}
+
+.example-2 .menu-content li {
+	margin: 0 5px;
+	position: relative;
+}
+
+.example-2 .menu-content span {
+	transition: all 0.3s;
+	opacity: 0;
+}
+
+.example-2 .data {
+	color: white;
+	transform: translateY(calc(70px + 4em));
+}
+
+.example-2 .title a {
+	color: #fff;
+}
+
+.example-2 .button {
+	display: block;
+	width: 100px;
+	margin: 2em auto 1em;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+	line-height: 1;
+	position: relative;
+	font-weight: 700;
+}
+
+.example-2 .button::after {
+	content: '\2192';
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(0, -50%);
+	transition: all 0.3s;
+}
+
+.example-2 .button:hover::after {
+	transform: translate(5px, -50%);
+	opacity: 1;
+}
