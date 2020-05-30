@@ -7,10 +7,10 @@
 		<link rel="stylesheet" type="text/css" href="./css/style.css" />
 	</head>
 
-	<body>
+	<body onload="documentReady()">
 		<div class="grid-container">
 			<div class="header">
-				<h1>the nobel prize</h1>
+				<a href="/"><h1>the nobel prize</h1></a>
 				<p>
 					for the greatest benefit to humankind
 					<img src="./images/signature.svg" alt="" />
@@ -18,9 +18,17 @@
 				<hr />
 			</div>
 			<div class="search">
-				<form action="#">
-					<input type="text" placeholder="Search" />
-					<span><i class="gg-search"></i></span>
+				<form action="" onsubmit="searchNobel()">
+					<input
+						type="text"
+						placeholder="n/name or c/category y/year"
+						name="search"
+						id="search"
+						autocomplete="off"
+					/>
+					<span onclick="searchNobel()"
+						><i class="gg-search"></i
+					></span>
 				</form>
 			</div>
 			<div class="footer">
@@ -41,158 +49,16 @@
 					>
 				</p>
 			</div>
-			<div class="result">
-				<div class="search-results">
-					<div>
-						<p>
-							<i class="gg-profile"></i>
-							<span class="person_title"
-								>A. Michael Spence - 2001</span
-							>
-						</p>
-						<p>
-							<i class="gg-time"></i>
-							<span class="person_birth"
-								>1943 Montclair, NJ, USA</span
-							>
-						</p>
-						<p>
-							The reward was given
-							<span class="award_motivation"
-								>for their analyses of markets with asymmetric
-								information.</span
-							>
-							<span class="award_category"
-								>Economic Sciences</span
-							>
-						</p>
-						<hr />
-					</div>
-					<div>
-						<p>
-							<i class="gg-profile"></i>
-							<span class="person_title"
-								>A. Michael Spence - 2001</span
-							>
-						</p>
-						<p>
-							<i class="gg-time"></i>
-							<span class="person_birth"
-								>1943 Montclair, NJ, USA</span
-							>
-						</p>
-						<p>
-							The reward was given
-							<span class="award_motivation"
-								>for their analyses of markets with asymmetric
-								information.</span
-							>
-							<span class="award_category"
-								>Economic Sciences</span
-							>
-						</p>
-						<hr />
-					</div>
-					<div>
-						<p>
-							<i class="gg-profile"></i>
-							<span class="person_title"
-								>A. Michael Spence - 2001</span
-							>
-						</p>
-						<p>
-							<i class="gg-time"></i>
-							<span class="person_birth"
-								>1943 Montclair, NJ, USA</span
-							>
-						</p>
-						<p>
-							The reward was given
-							<span class="award_motivation"
-								>for their analyses of markets with asymmetric
-								information.</span
-							>
-							<span class="award_category"
-								>Economic Sciences</span
-							>
-						</p>
-						<hr />
-					</div>
-					<div>
-						<p>
-							<i class="gg-profile"></i>
-							<span class="person_title"
-								>A. Michael Spence - 2001</span
-							>
-						</p>
-						<p>
-							<i class="gg-time"></i>
-							<span class="person_birth"
-								>1943 Montclair, NJ, USA</span
-							>
-						</p>
-						<p>
-							The reward was given
-							<span class="award_motivation"
-								>for their analyses of markets with asymmetric
-								information.</span
-							>
-							<span class="award_category"
-								>Economic Sciences</span
-							>
-						</p>
-						<hr />
-					</div>
-					<div>
-						<p>
-							<i class="gg-profile"></i>
-							<span class="person_title"
-								>A. Michael Spence - 2001</span
-							>
-						</p>
-						<p>
-							<i class="gg-time"></i>
-							<span class="person_birth"
-								>1943 Montclair, NJ, USA</span
-							>
-						</p>
-						<p>
-							The reward was given
-							<span class="award_motivation"
-								>for their analyses of markets with asymmetric
-								information.</span
-							>
-							<span class="award_category"
-								>Economic Sciences</span
-							>
-						</p>
-						<hr />
-					</div>
-					<div>
-						<p>
-							<i class="gg-profile"></i>
-							<span class="person_title"
-								>A. Michael Spence - 2001</span
-							>
-						</p>
-						<p>
-							<i class="gg-time"></i>
-							<span class="person_birth"
-								>1943 Montclair, NJ, USA</span
-							>
-						</p>
-						<p>
-							The reward was given
-							<span class="award_motivation"
-								>for their analyses of markets with asymmetric
-								information.</span
-							>
-							<span class="award_category"
-								>Economic Sciences</span
-							>
-						</p>
-						<hr />
-					</div>
+			<div class="result" id="resultsContainer">
+				<div
+					style="
+						text-align: center;
+						margin-top: 150px;
+						margin-bottom: 250px;
+						color: #cea152;
+					"
+				>
+					<h3>Search for the greatest humans in history!</h3>
 				</div>
 			</div>
 		</div>
@@ -202,13 +68,11 @@
 				copyright to the materials shown here is due to it's original
 				copyright holder
 				<a href="https://nobelprize.org">nobleprize.org</a>
-				<a
-					href="#"
-					class="linkButton"
-					onclick="event.preventDefault(); document.getElementById('disclaimer').className += ' close';"
+				<a href="#" class="linkButton" onclick="closeDisclaimer()"
 					>Close</a
 				>
 			</p>
 		</div>
+		<script src="./js/search.js"></script>
 	</body>
 </html>
