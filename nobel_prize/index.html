@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=1, initial-scale=1.0" />
+		<title>GreatTitle</title>
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	</head>
+
+	<body onload="documentReady()">
+		<div class="grid-container">
+			<div class="header">
+				<a href="/"><h1>the nobel prize</h1></a>
+				<p>
+					for the greatest benefit to humankind
+					<img src="./images/signature.svg" alt="" />
+				</p>
+				<hr />
+			</div>
+			<div class="search">
+				<form action="" onsubmit="searchNobel()">
+					<input
+						type="text"
+						placeholder="n/name or c/category y/year"
+						name="search"
+						id="search"
+						autocomplete="off"
+					/>
+					<span onclick="searchNobel()"
+						><i class="gg-search"></i
+					></span>
+				</form>
+			</div>
+			<div class="footer">
+				<hr />
+				<blockquote>
+					“Alfred Nobel stipulated that no distinction of race or
+					colour will determine who received of his generosity.” ―
+					Abdus Salam<br />
+				</blockquote>
+				<p>
+					Honoring to those who didn't show less than their best to
+					the service of humanity. <br />
+					<span style="text-align: center; display: block;"
+						>Made with pride by
+						<a href="https://saberhosneydev.github.io"
+							>Saber Hosney</a
+						></span
+					>
+				</p>
+			</div>
+			<div class="result" id="resultsContainer">
+				<div
+					style="
+						text-align: center;
+						margin-top: 150px;
+						margin-bottom: 250px;
+						color: #cea152;
+					"
+				>
+					<h3>Search for the greatest humans in history!</h3>
+				</div>
+			</div>
+		</div>
+		<div class="disclaimer" id="disclaimer">
+			<p>
+				Disclaimer: this website may contains copyrighted work, all the
+				copyright to the materials shown here is due to it's original
+				copyright holder
+				<a href="https://nobelprize.org">nobleprize.org</a>
+				<a href="#" class="linkButton" onclick="closeDisclaimer()"
+					>Close</a
+				>
+			</p>
+		</div>
+		<script src="./js/utility.js"></script>
+		<script src="./js/search.js"></script>
+	</body>
+</html>
