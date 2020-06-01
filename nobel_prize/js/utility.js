@@ -1,3 +1,4 @@
+let nobel_database;
 function getCookie(cname) {
 	var name = cname + "=";
 	var decodedCookie = decodeURIComponent(document.cookie);
@@ -21,8 +22,40 @@ function documentReady() {
 	} else {
 		document.getElementById("disclaimer").style.display = "none";
 	}
+	let updateRepo = false;
+	if (updateRepo == true) {
+		storeLocal();
+	} else {
+		if (localStorage.getItem("shd.nobel_prize") != null) {
+			nobel_database = JSON.parse(
+				localStorage.getItem("shd.nobel_prize")
+			)["laureates"];
+		} else {
+			storeLocal();
+			console.log("invoked");
+		}
+	}
 }
-
+function storeLocal() {
+	fetch("/js/prize.json", { method: "GET" }).then(
+		function (response) {
+			response
+				.text()
+				.then(function (res) {
+					localStorage.setItem("shd.nobel_prize", res);
+					nobel_database = JSON.parse(
+						localStorage.getItem("shd.nobel_prize")
+					)["laureates"];
+				})
+				.catch(function (error) {
+					console.log(error);
+				});
+		},
+		function (error) {
+			console.log(error);
+		}
+	);
+}
 function closeDisclaimer() {
 	event.preventDefault();
 	document.getElementById("disclaimer").className += " close";

@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="./css/style.css" />
 	</head>
 
-	<body onload="documentReady()">
+	<body onload="documentReady();loader()">
 		<div class="grid-container">
 			<div class="header">
 				<a href="/"><h1>the nobel prize</h1></a>
@@ -35,8 +35,24 @@
 					>
 				</p>
 			</div>
-			<div class="result" id="resultsContainer">
-				ptest
+			<div
+				class="result"
+				id="resultsContainer"
+				style="width: 85%; margin-left: 7.5%;"
+			>
+				<div
+					style="
+						text-align: center;
+						margin-top: 150px;
+						margin-bottom: 250px;
+						font-size: 36px;
+					"
+				>
+					<p>
+						404 | not found, maybe try to use the
+						<a href="/">search</a> first ?
+					</p>
+				</div>
 			</div>
 		</div>
 		<div class="disclaimer" id="disclaimer">
