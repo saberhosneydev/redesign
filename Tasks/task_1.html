@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You don't know javascript - Task 1</title>
+    <style>
+        body {
+            background-color: #EBEAE6;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .nav {
+            background-color: #363636;
+
+        }
+
+        .links {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .links li {
+
+            display: inline-block;
+            padding: 20px;
+        }
+
+        .links li a {
+
+            text-decoration: none;
+            color: #B9B9B9;
+        }
+
+        .heading {
+            margin: 0;
+            padding: 0;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 1fr;
+            gap: 0px 0px;
+            grid-template-areas:
+                "left right";
+        }
+
+        .left {
+            grid-area: left;
+            /* width: 50%; */
+        }
+
+        .left .image {
+            margin-left: 15%;
+            margin-top: 30px;
+            width: 70%;
+        }
+
+        .right {
+            grid-area: right;
+        }
+
+        .right .slogan {
+            margin: 0;
+            padding: 0;
+            margin-top: 75px;
+            text-align: center;
+            color: #565959;
+        }
+
+        .right .btn {
+            text-align: center;
+            background-color: #FA8D38;
+            color: #eee;
+            width: 300px;
+            height: 50px;
+            border: 0;
+            font-size: 18px;
+            margin-left: 50%;
+            margin-top: 20px;
+            position: relative;
+            transform: translateX(-50%);
+        }
+
+        .btn:focus {
+            outline: #3d301f 1px solid;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+        }
+
+        .footer {
+            width: 100%;
+            height: 200px;
+            background-color: #363636;
+            text-align: center;
+        }
+
+        .footer h3 {
+            color: #EBEAE6;
+            font-size: 24px;
+            padding-top: 25px;
+        }
+
+        .footer .btn {
+            text-align: center;
+            background-color: #FA8D38;
+            color: #eee;
+            width: 300px;
+            height: 50px;
+            border: 0;
+            font-size: 18px;
+            margin-left: 50%;
+            margin-top: 20px;
+            position: relative;
+            transform: translateX(-100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <ul class="links">
+                <li><a href="#">The book series</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">The Author</a></li>
+                <li><a href="#">Free resources</a></li>
+            </ul>
+        </div>
+        <h1 class="heading">You don't know javascript</h1>
+        <div class="content">
+            <div class="left">
+                <img src="./task_1.jpg" alt="You don't know javascript" class="image">
+                <img src="./task_1.jpg" alt="You don't know javascript" class="image" style="margin-top: 0;">
+            </div>
+            <div class="right">
+                <h3 class="slogan">Don't just drift through javascript</h3>
+                <h3 class="slogan">Understand how javascript works</h3>
+                <h3 class="slogan">Start your journy through the bumpy side of javascript</h3>
+                <button href="#" class="btn">Order your copy now</button>
+            </div>
+        </div>
+        <div class="footer">
+            <h3>The first ebook in the boos series is absolutely free</h3>
+            <button href="#" class="btn">Order your copy now</button>
+        </div>
+    </div>
+</body>
+
+</html>
