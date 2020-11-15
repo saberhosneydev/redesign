@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <input type="text" name="amount" id="inputAmount"><button
+        onclick="calculate(document.getElementById('inputAmount').value)">Calculate</button>
+    <br>
+    <p id="error"></p>
+    <table>
+        <thead>
+            <tr>
+                <th>200</th>
+                <th>100</th>
+                <th>50</th>
+                <th>20</th>
+                <th>10</th>
+                <th>Left</th>
+                <th>Stages</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr id="outputAmount">
+
+            </tr>
+        </tbody>
+    </table>
+    <script src="./client.js"></script>
+</body>
+
+</html>
