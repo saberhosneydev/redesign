@@ -1,9 +1,9 @@
 function calculate(inputAmount) {
     let error = document.getElementById("error");
     if (inputAmount < 10 || isNaN(inputAmount)) {
-        error.innerHTML = "عيب ميصحش كدة"
+        error.innerHTML = "A valid number above 10 pounds!";
     } else if (inputAmount > 9999) {
-        error.innerHTML = "اخرك 9999 جنية يبشا"
+        error.innerHTML = "ATM can withdraw a max of 9999 pounds!"
     } else {
         error.innerHTML = "";
         let amount = Array.from(inputAmount.toString()).map(Number);
@@ -67,14 +67,14 @@ function calculate(inputAmount) {
             }
 
         }
-        document.getElementById("outputAmount").innerHTML = `
-        <td>${_200}</td>
-<td>${_100}</td>
-<td>${_50}</td>
-<td>${_20}</td>
-<td>${_10}</td>
-<td>${amount[0] || 0}</td>
-<td>${Math.ceil(inputAmount / 3000)}</td>
-        `;
+        document.getElementById("outputAmount").innerHTML =
+            `<tr><td>200</td><td>${_200}</td></tr>
+<tr><td>100</td><td>${_100}</td></tr>
+<tr><td>50</td><td>${_50}</td></tr>
+<tr><td>20</td><td>${_20}</td></tr>
+<tr><td>10</td><td>${_10}</td></tr>`;
+        document.getElementById("stats").innerHTML =
+            `You will withdraw a total of <strong>${_200 * 200 + _100 * 100 + _50 * 50 + _20 * 20 + _10 * 10} pound(s)</strong> on <strong>${Math.ceil(inputAmount / 3000)}</strong> stage(s).
+            <br><strong>Balance Left:</strong> ${amount[0] || 0} pound(s).`;
     }
 }

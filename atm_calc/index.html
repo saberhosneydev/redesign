@@ -5,33 +5,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATM calculator</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./milligram.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <input type="text" name="amount" id="inputAmount"><button
-        onclick="calculate(document.getElementById('inputAmount').value)">Calculate</button>
-    <br>
-    <p id="error"></p>
-    <table>
-        <thead>
-            <tr>
-                <th>200</th>
-                <th>100</th>
-                <th>50</th>
-                <th>20</th>
-                <th>10</th>
-                <th>Left</th>
-                <th>Stages</th>
-            </tr>
+    <div class="container">
+        <div class="row">
+            <div class="column column-50 column-offset-25" style="text-align: center;">
+                <h1 style="color: #9b4dca;margin-top: 15px;">ATM withdraw calculator</h1 style="color: #9b4dca;">
+                <hr>
+                <label for="amount" style="text-align:left;">How much to withdraw?</label>
+                <input style="width: 50%;" class="float-left" type="text" name="amount" id="inputAmount"
+                    placeholder="Enter a number to get started">
+                <button onclick="calculate(document.getElementById('inputAmount').value)">Calculate</button>
+                <br>
+                <h5 style="color:lightcoral;" id="error"></h5>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Denomination</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="outputAmount">
+                        <tr>
+                            <td>200</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>100</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>50</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <p id="stats">
+                    You will withdraw a total of <strong>0 pound(s)</strong> on <strong>0</strong> stage(s).
+                    <br><strong>Balance Left:</strong> 0 pound(s).
+                </p>
+                <br>
+                <hr>
+                <p>Made with love by <a href="https://github.com/saberhosneydev" target="_blank">@SaberHosneyDev</a>
+                    &copy;
+                    <span id="copyright">
+                        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+                    </span></p>
+            </div>
+        </div>
+    </div>
 
-        </thead>
-        <tbody>
-            <tr id="outputAmount">
-
-            </tr>
-        </tbody>
-    </table>
     <script src="./client.js"></script>
 </body>
 
