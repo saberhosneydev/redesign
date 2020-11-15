@@ -11,17 +11,51 @@
     <!-- CSS Reset -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="./milligram.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 2px dotted #9b4dca;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            background-color: white;
+            color: #9b4dca;
+            text-align: center;
+            padding: 5px;
+            border-radius: 6px;
+            border: #9b4dca 1px solid;
+
+            /* Position the tooltip text - see examples below! */
+            position: absolute;
+            z-index: 1;
+            width: 300px;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -150px;
+        }
+
+        /* Show the tooltip text when you mouse over the tooltip container */
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        .title {
+            color: #9b4dca;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
             <div class="column column-50 column-offset-25" style="text-align: center;">
-                <h1 style="color: #9b4dca;margin-top: 15px;">ATM withdraw calculator</h1 style="color: #9b4dca;">
+                <h1 class="title">ATM withdraw calculator</h1 style="color: #9b4dca;">
                 <hr>
                 <label for="amount" style="text-align:left;">How much to withdraw?</label>
-                <input style="width: 50%;" class="float-left" type="text" name="amount" id="inputAmount"
+                <input style="width: 70%;" class="float-left" type="text" name="amount" id="inputAmount"
                     placeholder="Enter a number to get started">
                 <button onclick="calculate(document.getElementById('inputAmount').value)">Calculate</button>
                 <br>
@@ -58,12 +92,15 @@
                 </table>
                 <br>
                 <p id="stats">
-                    You will withdraw a total of <strong>0 pound(s)</strong> on <strong>0</strong> stage(s).
+                    You will withdraw a total of <strong>0 pound(s)</strong> on <strong>0</strong> <span
+                        class="tooltip">stage(s)<span class="tooltiptext">You can withdraw a maximum of 3000 pounds per
+                            operation!</span></span>.
                     <br><strong>Balance Left:</strong> 0 pound(s).
                 </p>
                 <br>
                 <hr>
-                <p>Made with love by <a href="https://github.com/saberhosneydev" target="_blank">@SaberHosneyDev</a>
+                <p>Made with <span style="color: red; font-size: 20px;">&hearts;</span> by <a
+                        href="https://github.com/saberhosneydev" target="_blank">@SaberHosneyDev</a>
                     &copy;
                     <span id="copyright">
                         <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>

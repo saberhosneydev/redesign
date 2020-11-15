@@ -74,7 +74,7 @@ function calculate(inputAmount) {
 <tr><td>20</td><td>${_20}</td></tr>
 <tr><td>10</td><td>${_10}</td></tr>`;
         document.getElementById("stats").innerHTML =
-            `You will withdraw a total of <strong>${_200 * 200 + _100 * 100 + _50 * 50 + _20 * 20 + _10 * 10} pound(s)</strong> on <strong>${Math.ceil(inputAmount / 3000)}</strong> stage(s).
+            `You will withdraw a total of <strong>${_200 * 200 + _100 * 100 + _50 * 50 + _20 * 20 + _10 * 10} pound(s)</strong> on <strong>${Math.ceil(inputAmount / 3000)}</strong> <span class="tooltip">stage(s)</span>.
             <br><strong>Balance Left:</strong> ${amount[0] || 0} pound(s).`;
     }
 }
