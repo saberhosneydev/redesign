@@ -7,3 +7,4 @@ My learning projects, when it's ready to face the world it will has it's own rep
 4. [Inspire](https://saberhosneydev.github.io/redesign/inspire/)
 5. [LaravelTodo](https://saberhosneydev.github.io/redesign/LaravelTodo/)
 6. [Firebase Auth](https://saberhosneydev.github.io/redesign/firebase_auth_web/)
+7. [ATM Calculator](https://saberhosneydev.github.io/redesign/atm_calc/)
