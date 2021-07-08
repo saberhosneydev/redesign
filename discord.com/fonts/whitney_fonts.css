@@ -1,0 +1,52 @@
+@font-face {
+    font-family: Whitney;
+    font-weight: 300;
+    src: url(./6c6374bad0b0b6d204d8d6dc4a18d820.woff) format("woff")
+}
+
+@font-face {
+    font-family: Whitney;
+    font-weight: 400;
+    src: url(./e8acd7d9bf6207f99350ca9f9e23b168.woff) format("woff")
+}
+
+@font-face {
+    font-family: Whitney;
+    font-weight: 500;
+    src: url(./3bdef1251a424500c1b3a78dea9b7e57.woff) format("woff")
+}
+
+@font-face {
+    font-family: Whitney;
+    font-weight: 600;
+    src: url(./be0060dafb7a0e31d2a1ca17c0708636.woff) format("woff")
+}
+
+@font-face {
+    font-family: Whitney;
+    font-weight: 700;
+    src: url(./8e12fb4f14d9c4592eb8ec9f22337b04.woff) format("woff")
+}
+
+@font-face {
+    font-family: Whitney;
+    font-style: italic;
+    font-weight: 400;
+    src: url(./fe89b2b49c21616996ca5f421f6533fd.woff) format("woff")
+}
+
+@font-face {
+    font-family: ArchivoBlack;
+    src: url(./b3d2cec6ac615af28f624365ce84fbef.woff) format("woff")
+}
+
+@font-face {
+    font-family: Reenie Beanie;
+    src: url(./4b861c4f9cb4e4fbec1662f6c6e9186f.woff) format("woff")
+}
+
+@font-face {
+    font-family: SourceCodePro;
+    font-weight: 400;
+    src: url(./748ac49ebe4bf0ddfe85c005be7c64c4.woff) format("woff")
+}

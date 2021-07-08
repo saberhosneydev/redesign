@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+
+    <title>RiverBlood</title>
+</head>
+
+<body class="bg-gray-800 text-gray-300">
+    <!-- Navbar -->
+    <div class="navbar border-b-2 border-gray-300 w-10/12 m-auto py-2">
+        <div class="flex items-center">
+            <a href="#"><img src="./assets/studio_logo.png" /></a>
+            <span>|</span>
+            <div class="flex-grow text-lg font-medium">
+                <a href="#" class="hover:text-white mx-8">Home</a>
+                <a href="#" class="hover:text-white mx-8">Games</a>
+                <a href="#" class="hover:text-white mx-8">Store</a>
+            </div>
+            <div class="user_area flex items-center">
+                <a href="#" class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg></a>
+            </div>
+        </div>
+    </div>
+    <div class="main_content grid grid-cols-12 gap-4 w-10/12 mx-auto mt-8">
+        <div class="featured_video col-span-8 ">
+            <video id="player" playsinline controls poster="./assets/trailer_poster.jpg"
+                data-poster="./assets/trailer_poster.jpg">
+                <source src="./assets/trailer.mp4" type="video/mp4" />
+            </video>
+            <p class="px-6 my-6 font-semibold text-sm">
+                The player controls "Zain Muhammad", as he travels to Palestine in the year 2037 after Palestine was
+                devastated by a nuclear radiation outbreak that has been genetically developed to strengthen our genes
+                as human beings, but Excessive use of this drug cause the lack of hours of sleep, which caused this.
+                Zombies, in order to escort his team to Palestine to solve this mystery. It deals with the player
+                defending himself against zombie-like humans, as well as hostile people, by using weapons and stealth,
+                upgrading his equipment at that. The player can use weapons and medicine on his way.</p>
+        </div>
+        <div class="purchase_section col-span-4 w-11/12 justify-self-end">
+            <img src="./assets/game_logo.png">
+            <div class="categories text-left mt-2">
+                <div class="inline-block uppercase bg-gray-500 text-white p-1 rounded text-sm">Base game</div>
+            </div>
+            <div class="purchase_price flex items-center mt-2">
+                <div class="inline-block uppercase bg-blue-600 text-white p-1 rounded text-sm mr-4">-100%</div>
+                <div class="inline-block uppercase text-lg text-white"><span class="line-through">$9.99</span> Free
+                </div>
+            </div>
+            <p class="text-sm text-white my-2">Sale ends 7/11/2021 at 5:00 PM</p>
+            <div class="purchase_buttons flex text-center my-2">
+                <a href="#" class="uppercase bg-blue-600 text-white rounded py-3 font-medium flex-grow">Buy now</a>
+            </div>
+            <div class="purchase_buttons flex text-center">
+                <a href="#"
+                    class="uppercase border-2 text-white rounded py-1 text-sm flex-grow flex items-center justify-center">
+                    <span class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg></span><span>add to
+                        wishlist</span></a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
